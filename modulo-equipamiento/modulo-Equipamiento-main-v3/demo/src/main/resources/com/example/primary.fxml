@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="TOP_CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.171"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimaryController" stylesheets="@styles.css">
+   <children>
+      <Label text="Inventario de Equipos Trekking"/>
+      
+      <TableView fx:id="tablaEquipos"  prefHeight="300.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="colId" text="ID"/>
+             <TableColumn fx:id="colNombre" text="Equipo"/>
+             <TableColumn fx:id="colCategoria" text="Categoría"/>
+             <TableColumn fx:id="colCantidad" text="Cantidad"/>
+             <TableColumn fx:id="colEstado" text="Estado"/>
+         </columns>
+      </TableView>
+
+      <HBox spacing="10.0" alignment="CENTER">
+         <Button text="Agregar" onAction="#switchToSecondary" style="-fx-padding: 10px 20px; -fx-font-size: 12;" />
+           <Button text="Editar" onAction="#editarEquipo" style="-fx-padding: 10px 20px; -fx-font-size: 12;"/>
+           <Button text="Eliminar" onAction="#eliminarEquipo" style="-fx-padding: 10px 20px; -fx-font-size: 12;"/>
+           <Button text="Restaurar" onAction="#restaurarEquipo" style="-fx-padding: 10px 20px; -fx-font-size: 12;" />
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
